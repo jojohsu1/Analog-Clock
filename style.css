@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap');
+:root {}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    background-color: rgb(158, 158, 158);
+    border: 10px solid rgb(245, 245, 245);
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow: 0 0 0 1px rgba(194, 194, 194, 0.1), inset 0 0 0 2px rgb(158, 158, 158), inset 0 0 7px black, 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+    /* account for the height of the clock hands */
+}
+
+.clock-face:after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: #f00;
+    box-shadow: 0 0 0 5px #f00;
+    position: absolute;
+    transform: translate(-50%, -50%)
+}
+
+.hand {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.hour-hand:after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 28%;
+    bottom: 50%;
+    left: 50%;
+    position: absolute;
+    background-color: #000;
+    transform: translate(-50%, 0%);
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+.min-hand:after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 40%;
+    bottom: 50%;
+    left: 50%;
+    position: absolute;
+    background-color: rgb(68, 68, 68);
+    transform: translate(-50%, 0%);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.second-hand:after {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 45%;
+    bottom: 50%;
+    left: 50%;
+    position: absolute;
+    background-color: #f00;
+    transform: translate(-50%, 0%);
+    border-radius: 2px;
+}
+
+.number {
+    --rotation: 0;
+    position: absolute;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+
+.clock .number1 {
+    --rotation: 30deg;
+    transform: ;
+}
+
+.clock .number2 {
+    --rotation: 60deg;
+}
+
+.clock .number3 {
+    --rotation: 90deg;
+}
+
+.clock .number4 {
+    --rotation: 120deg;
+}
+
+.clock .number5 {
+    --rotation: 150deg;
+}
+
+.clock .number6 {
+    --rotation: 180deg;
+}
+
+.clock .number7 {
+    --rotation: 210deg;
+}
+
+.clock .number8 {
+    --rotation: 240deg;
+}
+
+.clock .number9 {
+    --rotation: 270deg;
+}
+
+.clock .number10 {
+    --rotation: 300deg;
+}
+
+.clock .number11 {
+    --rotation: 330deg;
+}
+
+.deg {
+    display: block;
+}
+
+.one {
+    transform: rotate(-30deg);
+}
+
+.eleven {
+    transform: rotate(30deg);
+}
+
+.two {
+    transform: rotate(-60deg);
+}
+
+.ten {
+    transform: rotate(60deg);
+}
+
+.three {
+    transform: rotate(-90deg);
+}
+
+.nine {
+    transform: rotate(90deg);
+}
+
+.four {
+    transform: rotate(-120deg);
+}
+
+.eight {
+    transform: rotate(120deg);
+}
+
+.five {
+    transform: rotate(-150deg);
+}
+
+.seven {
+    transform: rotate(150deg);
+}
+
+.six {
+    transform: rotate(180deg);
+}
